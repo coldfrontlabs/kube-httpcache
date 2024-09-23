@@ -14,6 +14,11 @@ spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 100%
   selector:
     matchLabels:
       {{- include "kube-httpcache.selectorLabels" . | nindent 6 }}
