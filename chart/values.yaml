@@ -65,8 +65,8 @@ rbac:
   enabled: true
 
 logging:
-  enabled: false
-  logFormat: '%h %U'
+  enabled: true
+  logFormat: '%h %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\"'
   securityContext: {}
 
 # create a prometheus operator ServiceMonitor
