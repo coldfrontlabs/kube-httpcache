@@ -251,6 +251,8 @@ nodeSelector: {}
 
 tolerations: []
 
+priorityClassName: ""
+
 #terminationGracePeriodSeconds: 60
 
 affinity: {}
